@@ -1,0 +1,5 @@
+Execute (test):
+  AssertEqual '1', '1'
+
+Execute (test):
+  AssertEqual '1', TestHere()
