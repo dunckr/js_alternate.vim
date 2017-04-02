@@ -1,7 +1,16 @@
-if exists("g:loaded_js_alternate")
-	finish
-endif
-let g:loaded_js_alternate = 1
+function! js_alternate#alternatives(path)
+	let alternatives = []
+	if js_alternate#is_a_test(a:path)
+		for extension in g:js_alternate#extension_types
+		let alternatives += js_alternate#to_src(a:path, extension)
+		endfor
+	else
+		for extension in g:js_alternate#extension_types
+		let alternatives += js_alternate#to_test(a:path, extension)
+		endfor
+	endif
+	return alternatives
+endfunction
 
 function! js_alternate#to_test(path, extension)
 	let file_name = s:file_name(a:path)

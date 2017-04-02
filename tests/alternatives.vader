@@ -1,0 +1,39 @@
+Execute (js_alternate#alternatives('src/component/example')):
+  AssertEqual js_alternate#alternatives('src/component/example'), [
+  \'src/component/example.tests.js',
+  \'tests/component/example.js',
+  \'tests/component/example.tests.js',
+  \'src/component/__tests__/example.js',
+  \'src/component/__tests__/example.tests.js',
+  \'src/component/example.test.js',
+  \'test/component/example.js',
+  \'test/component/example.test.js',
+  \'src/component/__test__/example.js',
+  \'src/component/__test__/example.test.js',
+  \'src/component/example.spec.js',
+  \'spec/component/example.js',
+  \'spec/component/example.spec.js',
+  \'src/component/__spec__/example.js',
+  \'src/component/__spec__/example.spec.js',
+  \'src/component/example.tests.jsx',
+  \'tests/component/example.jsx',
+  \'tests/component/example.tests.jsx',
+  \'src/component/__tests__/example.jsx',
+  \'src/component/__tests__/example.tests.jsx',
+  \'src/component/example.test.jsx',
+  \'test/component/example.jsx',
+  \'test/component/example.test.jsx',
+  \'src/component/__test__/example.jsx',
+  \'src/component/__test__/example.test.jsx',
+  \'src/component/example.spec.jsx',
+  \'spec/component/example.jsx',
+  \'spec/component/example.spec.jsx',
+  \'src/component/__spec__/example.jsx',
+  \'src/component/__spec__/example.spec.jsx',
+  \]
+
+Execute (js_alternate#alternatives('src/component/__test__/example.test')):
+  AssertEqual js_alternate#alternatives('src/component/__test__/example.test'), [
+  \'src/component/example.js',
+  \'src/component/example.jsx'
+  \]

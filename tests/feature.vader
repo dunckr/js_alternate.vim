@@ -1,0 +1,9 @@
+Execute (js_alternate#run()):
+  exec ':e ' . 'support/example.js'
+  call js_alternate#run()
+  AssertEqual expand("%"), 'support/__test__/example.test.js'
+
+Execute (js_alternate#run()):
+  exec ':e ' . 'support/__test__/example.test.js'
+  call js_alternate#run()
+  AssertEqual expand("%"), 'support/example.js'
