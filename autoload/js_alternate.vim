@@ -2,11 +2,11 @@ function! js_alternate#alternatives(path)
 	let alternatives = []
 	if js_alternate#is_a_test(a:path)
 		for extension in g:js_alternate#extension_types
-		let alternatives += js_alternate#to_src(a:path, extension)
+			let alternatives += js_alternate#to_src(a:path, extension)
 		endfor
 	else
 		for extension in g:js_alternate#extension_types
-		let alternatives += js_alternate#to_test(a:path, extension)
+			let alternatives += js_alternate#to_test(a:path, extension)
 		endfor
 	endif
 	return alternatives
@@ -22,13 +22,19 @@ function! js_alternate#to_test(path, extension)
 	let alternatives = []
 
 	for type in g:js_alternate#test_types
-		call add(alternatives, path_full . '.' . type . extension)
 		call add(alternatives, type . '/' . path_without_root . extension)
-		call add(alternatives, type . '/' . path_without_root . '.' . type . extension)
 		call add(alternatives, path_without_file_name . '/__' . type . '__/' . file_name . extension)
-		call add(alternatives, path_without_file_name . '/__' . type . '__/' . file_name . '.' . type . extension)
+		for extension_type in g:js_alternate#test_types
+			call add(alternatives, path_full . '.' . extension_type . extension)
+			call add(alternatives, type . '/' . path_without_root . '.' . extension_type . extension)
+			call add(alternatives, path_without_file_name . '/__' . type . '__/' . file_name . '.' . extension_type . extension)
+		endfor
 	endfor
 	return alternatives
+endfunction
+
+
+function! s:path_excluding_root(path)
 endfunction
 
 function! js_alternate#to_src(path, extension)
