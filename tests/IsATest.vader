@@ -1,0 +1,23 @@
+Execute (IsATest('src/example.js')):
+  AssertEqual IsATest('src/example.js'), 0
+
+Execute (IsATest('example.test.js')):
+  AssertEqual IsATest('example.test.js'), 1
+
+Execute (IsATest('example.spec.js')):
+  AssertEqual IsATest('example.spec.js'), 1
+
+Execute (IsATest('__test__/example.js')):
+  AssertEqual IsATest('__test__/example.js'), 1
+
+Execute (IsATest('__tests__/example.js')):
+  AssertEqual IsATest('__tests__/example.js'), 1
+
+Execute (IsATest('test/example.js')):
+  AssertEqual IsATest('test/example.js'), 1
+
+Execute (IsATest('tests/example.js')):
+  AssertEqual IsATest('tests/example.js'), 1
+
+Execute (IsATest('spec/example.js')):
+  AssertEqual IsATest('spec/example.js'), 1
