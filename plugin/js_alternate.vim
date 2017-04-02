@@ -12,5 +12,3 @@ function! js_alternate#run()
 		end
 	endfor
 endfunction
-
-nnoremap <leader>t :call js_alternate#run()<cr>

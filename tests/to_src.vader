@@ -59,6 +59,11 @@ Execute (js_alternate#to_src('src/action/__tests__/index.tests', 'js')):
   \'src/action/index.js',
   \]
 
+Execute (js_alternate#to_src('src/action/__tests__/index.spec', 'js')):
+  AssertEqual js_alternate#to_src('src/action/__tests__/index.spec', 'js'), [
+  \'src/action/index.js',
+  \]
+
 Execute (js_alternate#to_src('src/action/index.spec', 'js')):
   AssertEqual js_alternate#to_src('src/action/index.spec', 'js'), [
   \'src/action/index.js',
