@@ -1,9 +1,9 @@
-" might be able to just find all top level directories...
-let g:test_types = ['tests', 'test', 'spec']
-let g:src_types = ['lib', 'src', 'app', 'scripts', 'js']
-let g:extensions = ['js', 'jsx']
+if exists("g:loaded_js_alternate")
+  finish
+endif
+let g:loaded_js_alternate = 1
 
-function! AlternativesToSrc(path, extension)
+function! js_alternate#to_test(path, extension)
 	let file_name = s:file_name(a:path)
 	let path_full = a:path
 	let path_without_root = s:path_excluding_root(a:path)
@@ -22,7 +22,7 @@ function! AlternativesToSrc(path, extension)
 	return alternatives
 endfunction
 
-function! AlternativesToTest(path, extension)
+function! js_alternate#to_src(path, extension)
 	let file_name = s:file_name(a:path)
 
 	let path_without_file_name = s:path_excluding_file_name(a:path)
@@ -55,7 +55,7 @@ function! AlternativesToTest(path, extension)
 	return alternatives
 endfunction
 
-function! IsATest(file)
+function! js_alternate#is_a_test(file)
 	" TODO use test_types
 	return match(a:file, 'test') != -1 ||
 				\match(a:file, 'tests') != -1 ||
