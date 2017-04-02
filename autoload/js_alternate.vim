@@ -33,10 +33,6 @@ function! js_alternate#to_test(path, extension)
 	return alternatives
 endfunction
 
-
-function! s:path_excluding_root(path)
-endfunction
-
 function! js_alternate#to_src(path, extension)
 	let file_name = s:file_name(a:path)
 

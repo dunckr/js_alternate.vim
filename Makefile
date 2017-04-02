@@ -12,6 +12,4 @@ testinteractive: testsetup
 testsetup:
 	git clone https://github.com/junegunn/vader.vim tests/vader || ( cd tests/vader && git pull --rebase; )
 
-# watchman-make -p 'plugin/*' 'tests/*' --make='make testnvim' -t plugin/javascript-switch.vim
-
 .PHONY: test testnvim testinteractive testsetup

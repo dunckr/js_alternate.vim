@@ -2,6 +2,6 @@
 
 # Usage
 
-```
+```vim
 nnoremap <leader>t :call js_alternate#run()<cr>
 ```
