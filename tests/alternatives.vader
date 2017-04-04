@@ -1,3 +1,10 @@
+Execute (js_alternate#alternatives('src/component/__test__/example.test')):
+  AssertEqual js_alternate#alternatives('src/component/__test__/example.test'), [
+  \'src/component/example.js',
+  \'src/component/example.jsx',
+  \'src/component/example.coffee'
+  \]
+
 Execute (js_alternate#alternatives('src/component/example')):
   AssertEqual js_alternate#alternatives('src/component/example'), [
   \'tests/component/example.js',
@@ -65,11 +72,38 @@ Execute (js_alternate#alternatives('src/component/example')):
   \'src/component/__spec__/example.test.jsx',
   \'src/component/example.spec.jsx',
   \'spec/component/example.spec.jsx',
-  \'src/component/__spec__/example.spec.jsx'
-  \]
-
-Execute (js_alternate#alternatives('src/component/__test__/example.test')):
-  AssertEqual js_alternate#alternatives('src/component/__test__/example.test'), [
-  \'src/component/example.js',
-  \'src/component/example.jsx'
+  \'src/component/__spec__/example.spec.jsx',
+  \'tests/component/example.coffee',
+  \'src/component/__tests__/example.coffee',
+  \'src/component/example.tests.coffee',
+  \'tests/component/example.tests.coffee',
+  \'src/component/__tests__/example.tests.coffee',
+  \'src/component/example.test.coffee',
+  \'tests/component/example.test.coffee',
+  \'src/component/__tests__/example.test.coffee',
+  \'src/component/example.spec.coffee',
+  \'tests/component/example.spec.coffee',
+  \'src/component/__tests__/example.spec.coffee',
+  \'test/component/example.coffee',
+  \'src/component/__test__/example.coffee',
+  \'src/component/example.tests.coffee',
+  \'test/component/example.tests.coffee',
+  \'src/component/__test__/example.tests.coffee',
+  \'src/component/example.test.coffee',
+  \'test/component/example.test.coffee',
+  \'src/component/__test__/example.test.coffee',
+  \'src/component/example.spec.coffee',
+  \'test/component/example.spec.coffee',
+  \'src/component/__test__/example.spec.coffee',
+  \'spec/component/example.coffee',
+  \'src/component/__spec__/example.coffee',
+  \'src/component/example.tests.coffee',
+  \'spec/component/example.tests.coffee',
+  \'src/component/__spec__/example.tests.coffee',
+  \'src/component/example.test.coffee',
+  \'spec/component/example.test.coffee',
+  \'src/component/__spec__/example.test.coffee',
+  \'src/component/example.spec.coffee',
+  \'spec/component/example.spec.coffee',
+  \'src/component/__spec__/example.spec.coffee'
   \]

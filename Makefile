@@ -1,4 +1,4 @@
-VIM = vim -N -u NORC -i NONE --cmd 'set rtp+=tests/vader rtp+=$$PWD'
+VIM = vim -N -u NORC -Nu support/vimrc -i NONE --cmd 'set rtp+=tests/vader rtp+=$$PWD'
 
 test: testsetup
 	$(VIM) '+Vader! tests/*.vader'
