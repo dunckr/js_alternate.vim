@@ -8,3 +8,5 @@ function! js_alternate#run()
 		end
 	endfor
 endfunction
+
+command! A call js_alternate#run()
