@@ -1,9 +1,34 @@
-Execute (js_alternate#run()):
+Execute (js_alternate#run(support/example.js)):
   exec ':e ' . 'support/example.jsx'
   call js_alternate#run()
   AssertEqual expand("%"), 'support/__tests__/example.spec.js'
 
-Execute (js_alternate#run()):
+Execute (js_alternate#run(support/__tests__/example.spec.js)):
   exec ':e ' . 'support/__tests__/example.spec.js'
   call js_alternate#run()
+  AssertEqual expand("%"), 'support/example.jsx'
+
+Execute (js_alternate#run(support/example.coffee)):
+  exec ':e ' . 'support/alternate.coffee'
+  call js_alternate#run()
+  AssertEqual expand("%"), 'support/__tests__/alternate.spec.coffee'
+
+Execute (coffee_alternate#run(support/__tests__/alternate.spec.coffee)):
+  exec ':e ' . 'support/__tests__/alternate.spec.coffee'
+  call js_alternate#run()
+  AssertEqual expand("%"), 'support/alternate.coffee'
+
+Execute (coffee_alternate#run(support/__tests__/alternate.spec.coffee)):
+  exec ':e ' . 'support/__tests__/alternate.spec.coffee'
+  call js_alternate#run()
+  AssertEqual expand("%"), 'support/alternate.coffee'
+
+Execute (:A(support/example.js)):
+  exec ':e ' . 'support/example.jsx'
+  exec ':A'
+  AssertEqual expand("%"), 'support/__tests__/example.spec.js'
+
+Execute (:A(support/__tests__/example.spec.js)):
+  exec ':e ' . 'support/__tests__/example.spec.js'
+  exec ':A'
   AssertEqual expand("%"), 'support/example.jsx'
