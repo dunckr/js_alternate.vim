@@ -1,1 +1,1 @@
-let g:js_alternate#extension_types = ['js', 'jsx', 'coffee']
+let g:javascript_alternate#extension_types = ['js', 'jsx', 'coffee']

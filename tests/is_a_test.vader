@@ -1,23 +1,23 @@
-Execute (js_alternate#is_a_test('src/example.js')):
-  AssertEqual js_alternate#is_a_test('src/example.js'), 0
+Execute (javascript_alternate#is_a_test('src/example.js')):
+  AssertEqual javascript_alternate#is_a_test('src/example.js'), 0
 
-Execute (js_alternate#is_a_test('example.test.js')):
-  AssertEqual js_alternate#is_a_test('example.test.js'), 1
+Execute (javascript_alternate#is_a_test('example.test.js')):
+  AssertEqual javascript_alternate#is_a_test('example.test.js'), 1
 
-Execute (js_alternate#is_a_test('example.spec.js')):
-  AssertEqual js_alternate#is_a_test('example.spec.js'), 1
+Execute (javascript_alternate#is_a_test('example.spec.js')):
+  AssertEqual javascript_alternate#is_a_test('example.spec.js'), 1
 
-Execute (js_alternate#is_a_test('__test__/example.js')):
-  AssertEqual js_alternate#is_a_test('__test__/example.js'), 1
+Execute (javascript_alternate#is_a_test('__test__/example.js')):
+  AssertEqual javascript_alternate#is_a_test('__test__/example.js'), 1
 
-Execute (js_alternate#is_a_test('__tests__/example.js')):
-  AssertEqual js_alternate#is_a_test('__tests__/example.js'), 1
+Execute (javascript_alternate#is_a_test('__tests__/example.js')):
+  AssertEqual javascript_alternate#is_a_test('__tests__/example.js'), 1
 
-Execute (js_alternate#is_a_test('test/example.js')):
-  AssertEqual js_alternate#is_a_test('test/example.js'), 1
+Execute (javascript_alternate#is_a_test('test/example.js')):
+  AssertEqual javascript_alternate#is_a_test('test/example.js'), 1
 
-Execute (js_alternate#is_a_test('tests/example.js')):
-  AssertEqual js_alternate#is_a_test('tests/example.js'), 1
+Execute (javascript_alternate#is_a_test('tests/example.js')):
+  AssertEqual javascript_alternate#is_a_test('tests/example.js'), 1
 
-Execute (js_alternate#is_a_test('spec/example.js')):
-  AssertEqual js_alternate#is_a_test('spec/example.js'), 1
+Execute (javascript_alternate#is_a_test('spec/example.js')):
+  AssertEqual javascript_alternate#is_a_test('spec/example.js'), 1

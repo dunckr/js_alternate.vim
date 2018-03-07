@@ -1,6 +1,6 @@
-function! js_alternate#run()
+function! javascript_alternate#run()
 	let path = expand("%:r")
-	let alternatives = js_alternate#alternatives(path)
+	let alternatives = javascript_alternate#alternatives(path)
 	for alternative in alternatives
 		if filereadable(alternative)
 			exec ':e ' . alternative
@@ -9,4 +9,4 @@ function! js_alternate#run()
 	endfor
 endfunction
 
-command! A call js_alternate#run()
+command! A call javascript_alternate#run()

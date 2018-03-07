@@ -1,12 +1,12 @@
-Execute (js_alternate#alternatives('src/component/__test__/example.test')):
-  AssertEqual js_alternate#alternatives('src/component/__test__/example.test'), [
+Execute (javascript_alternate#alternatives('src/component/__test__/example.test')):
+  AssertEqual javascript_alternate#alternatives('src/component/__test__/example.test'), [
   \'src/component/example.js',
   \'src/component/example.jsx',
   \'src/component/example.coffee'
   \]
 
-Execute (js_alternate#alternatives('src/component/example')):
-  AssertEqual js_alternate#alternatives('src/component/example'), [
+Execute (javascript_alternate#alternatives('src/component/example')):
+  AssertEqual javascript_alternate#alternatives('src/component/example'), [
   \'tests/component/example.js',
   \'src/component/__tests__/example.js',
   \'src/component/example.tests.js',

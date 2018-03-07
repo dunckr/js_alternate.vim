@@ -1,10 +1,10 @@
-Execute (js_alternate#to_src('src/action/index.test', 'js')):
-  AssertEqual js_alternate#to_src('src/action/index.test', 'js'), [
+Execute (javascript_alternate#to_src('src/action/index.test', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/index.test', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('test/action/index', 'js')):
-  AssertEqual js_alternate#to_src('test/action/index', 'js'), [
+Execute (javascript_alternate#to_src('test/action/index', 'js')):
+  AssertEqual javascript_alternate#to_src('test/action/index', 'js'), [
   \'lib/action/index.js',
   \'src/action/index.js',
   \'app/action/index.js',
@@ -12,8 +12,8 @@ Execute (js_alternate#to_src('test/action/index', 'js')):
   \'js/action/index.js'
   \]
 
-Execute (js_alternate#to_src('test/action/index.test', 'js')):
-  AssertEqual js_alternate#to_src('test/action/index.test', 'js'), [
+Execute (javascript_alternate#to_src('test/action/index.test', 'js')):
+  AssertEqual javascript_alternate#to_src('test/action/index.test', 'js'), [
   \'lib/action/index.js',
   \'src/action/index.js',
   \'app/action/index.js',
@@ -21,18 +21,18 @@ Execute (js_alternate#to_src('test/action/index.test', 'js')):
   \'js/action/index.js'
   \]
 
-Execute (js_alternate#to_src('src/action/__test__/index', 'js')):
-  AssertEqual js_alternate#to_src('src/action/__test__/index', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__test__/index', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/__test__/index', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('src/action/__test__/index.test', 'js')):
-  AssertEqual js_alternate#to_src('src/action/index.test', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__test__/index.test', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/index.test', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('tests/action/index', 'js')):
-  AssertEqual js_alternate#to_src('tests/action/index', 'js'), [
+Execute (javascript_alternate#to_src('tests/action/index', 'js')):
+  AssertEqual javascript_alternate#to_src('tests/action/index', 'js'), [
   \'lib/action/index.js',
   \'src/action/index.js',
   \'app/action/index.js',
@@ -40,8 +40,8 @@ Execute (js_alternate#to_src('tests/action/index', 'js')):
   \'js/action/index.js'
   \]
 
-Execute (js_alternate#to_src('tests/action/index.tests', 'js')):
-  AssertEqual js_alternate#to_src('tests/action/index.tests', 'js'), [
+Execute (javascript_alternate#to_src('tests/action/index.tests', 'js')):
+  AssertEqual javascript_alternate#to_src('tests/action/index.tests', 'js'), [
   \'lib/action/index.js',
   \'src/action/index.js',
   \'app/action/index.js',
@@ -49,28 +49,28 @@ Execute (js_alternate#to_src('tests/action/index.tests', 'js')):
   \'js/action/index.js'
   \]
 
-Execute (js_alternate#to_src('src/action/__tests__/index', 'js')):
-  AssertEqual js_alternate#to_src('src/action/__tests__/index', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__tests__/index', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/__tests__/index', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('src/action/__tests__/index.tests', 'js')):
-  AssertEqual js_alternate#to_src('src/action/__tests__/index.tests', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__tests__/index.tests', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/__tests__/index.tests', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('src/action/__tests__/index.spec', 'js')):
-  AssertEqual js_alternate#to_src('src/action/__tests__/index.spec', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__tests__/index.spec', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/__tests__/index.spec', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('src/action/index.spec', 'js')):
-  AssertEqual js_alternate#to_src('src/action/index.spec', 'js'), [
+Execute (javascript_alternate#to_src('src/action/index.spec', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/index.spec', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('spec/action/index', 'js')):
-  AssertEqual js_alternate#to_src('spec/action/index', 'js'), [
+Execute (javascript_alternate#to_src('spec/action/index', 'js')):
+  AssertEqual javascript_alternate#to_src('spec/action/index', 'js'), [
   \'lib/action/index.js',
   \'src/action/index.js',
   \'app/action/index.js',
@@ -78,8 +78,8 @@ Execute (js_alternate#to_src('spec/action/index', 'js')):
   \'js/action/index.js'
   \]
 
-Execute (js_alternate#to_src('spec/action/index.spec', 'js')):
-  AssertEqual js_alternate#to_src('spec/action/index.spec', 'js'), [
+Execute (javascript_alternate#to_src('spec/action/index.spec', 'js')):
+  AssertEqual javascript_alternate#to_src('spec/action/index.spec', 'js'), [
   \'lib/action/index.js',
   \'src/action/index.js',
   \'app/action/index.js',
@@ -87,12 +87,12 @@ Execute (js_alternate#to_src('spec/action/index.spec', 'js')):
   \'js/action/index.js'
   \]
 
-Execute (js_alternate#to_src('src/action/__spec__/index', 'js')):
-  AssertEqual js_alternate#to_src('src/action/__spec__/index', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__spec__/index', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/__spec__/index', 'js'), [
   \'src/action/index.js',
   \]
 
-Execute (js_alternate#to_src('src/action/__spec__/index.spec', 'js')):
-  AssertEqual js_alternate#to_src('src/action/__spec__/index.spec', 'js'), [
+Execute (javascript_alternate#to_src('src/action/__spec__/index.spec', 'js')):
+  AssertEqual javascript_alternate#to_src('src/action/__spec__/index.spec', 'js'), [
   \'src/action/index.js',
   \]

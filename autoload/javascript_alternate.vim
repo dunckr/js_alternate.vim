@@ -1,22 +1,22 @@
-let g:js_alternate#src_types = get(g:, 'js_alternate#src_types ', ['lib', 'src', 'app', 'scripts', 'js'])
-let g:js_alternate#test_types = get(g:, 'js_alternate#test_types', ['tests', 'test', 'spec'])
-let g:js_alternate#extension_types = get(g: , 'js_alternate#extension_types', ['js', 'jsx'])
+let g:javascript_alternate#src_types = get(g:, 'javascript_alternate#src_types ', ['lib', 'src', 'app', 'scripts', 'js'])
+let g:javascript_alternate#test_types = get(g:, 'javascript_alternate#test_types', ['tests', 'test', 'spec'])
+let g:javascript_alternate#extension_types = get(g: , 'javascript_alternate#extension_types', ['js', 'jsx'])
 
-function! js_alternate#alternatives(path)
+function! javascript_alternate#alternatives(path)
 	let alternatives = []
-	if js_alternate#is_a_test(a:path)
-		for extension in g:js_alternate#extension_types
-			let alternatives += js_alternate#to_src(a:path, extension)
+	if javascript_alternate#is_a_test(a:path)
+		for extension in g:javascript_alternate#extension_types
+			let alternatives += javascript_alternate#to_src(a:path, extension)
 		endfor
 	else
-		for extension in g:js_alternate#extension_types
-			let alternatives += js_alternate#to_test(a:path, extension)
+		for extension in g:javascript_alternate#extension_types
+			let alternatives += javascript_alternate#to_test(a:path, extension)
 		endfor
 	endif
 	return alternatives
 endfunction
 
-function! js_alternate#to_test(path, extension)
+function! javascript_alternate#to_test(path, extension)
 	let file_name = s:file_name(a:path)
 	let path_full = a:path
 	let path_without_root = s:path_excluding_root(a:path)
@@ -25,10 +25,10 @@ function! js_alternate#to_test(path, extension)
 	let extension = "." . a:extension
 	let alternatives = []
 
-	for type in g:js_alternate#test_types
+	for type in g:javascript_alternate#test_types
 		call add(alternatives, type . '/' . path_without_root . extension)
 		call add(alternatives, path_without_file_name . '/__' . type . '__/' . file_name . extension)
-		for extension_type in g:js_alternate#test_types
+		for extension_type in g:javascript_alternate#test_types
 			call add(alternatives, path_full . '.' . extension_type . extension)
 			call add(alternatives, type . '/' . path_without_root . '.' . extension_type . extension)
 			call add(alternatives, path_without_file_name . '/__' . type . '__/' . file_name . '.' . extension_type . extension)
@@ -37,19 +37,19 @@ function! js_alternate#to_test(path, extension)
 	return alternatives
 endfunction
 
-function! js_alternate#to_src(path, extension)
+function! javascript_alternate#to_src(path, extension)
 	let file_name = s:file_name(a:path)
 
 	let path_without_file_name = s:path_excluding_file_name(a:path)
 	let dir_split = split(path_without_file_name, '/')
 
 	" remove file_name.test
-	for type in g:js_alternate#test_types
+	for type in g:javascript_alternate#test_types
 		let file_name = substitute(file_name, '.' . type, '', '')
 	endfor
 
 	" remove last folder
-	for type in g:js_alternate#test_types
+	for type in g:javascript_alternate#test_types
 		if dir_split[len(dir_split) - 1] == '__' . type . '__'
 			call remove(dir_split, len(dir_split) - 1)
 		endif
@@ -58,9 +58,9 @@ function! js_alternate#to_src(path, extension)
 	let extension = "." . a:extension
 	let alternatives = []
 
-	if index(g:js_alternate#test_types, dir_split[0]) != -1
+	if index(g:javascript_alternate#test_types, dir_split[0]) != -1
 		call remove(dir_split, 0)
-		for type in g:js_alternate#src_types
+		for type in g:javascript_alternate#src_types
 			call add(alternatives, type . '/' . join(dir_split, '/') .  '/' . file_name . extension)
 		endfor
 	else
@@ -70,8 +70,8 @@ function! js_alternate#to_src(path, extension)
 	return alternatives
 endfunction
 
-function! js_alternate#is_a_test(path)
-	return len(filter(copy(g:js_alternate#test_types), 'match(a:path, v:val) != -1')) > 0
+function! javascript_alternate#is_a_test(path)
+	return len(filter(copy(g:javascript_alternate#test_types), 'match(a:path, v:val) != -1')) > 0
 endfunction
 
 function! s:path_excluding_root(path)

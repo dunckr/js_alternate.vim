@@ -1,5 +1,5 @@
-Execute (js_alternate#to_test('src/action/index', 'js')):
-  AssertEqual js_alternate#to_test('src/action/index', 'js'), [
+Execute (javascript_alternate#to_test('src/action/index', 'js')):
+  AssertEqual javascript_alternate#to_test('src/action/index', 'js'), [
   \'tests/action/index.js',
   \'src/action/__tests__/index.js',
   \'src/action/index.tests.js',
